@@ -1,0 +1,49 @@
+.form {
+    display: flex;
+}
+.form input{
+    flex: 1;
+    margin: 5px;
+    border: none;
+    padding: 10px 15px;
+    height: auto;
+}
+.form button{
+    width: 150px;
+    background-color: #ccc;
+    margin: 5px;
+    border: none;
+}
+
+.user {
+    margin: 15px 0;
+    background-color: red;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.user img{
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user>p,.user>span{
+    display: inline-block;
+}
+.user>p{
+    flex: 1;
+    padding: 5px;
+    height: 60px;
+}
+.user>span{
+    position: absolute;
+    bottom: 0;
+    left: 85px;
+}
+.user>button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

@@ -1,0 +1,29 @@
+
+.MyPosts > p {
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.form {
+    /*display: flex;*/
+}
+.form button{
+    width: 150px;
+    height: 35px;
+    background-color: #ccc;
+    margin: 5px;
+    border: none;
+}
+.form>input {
+    width: calc(100% - 170px);
+    margin: 5px;
+    border: none;
+    padding: 10px 15px;
+    height: 35px;
+}
+.form>span {
+    text-align: center;
+    margin: 10px 5px;
+}

@@ -1,0 +1,28 @@
+.nav {
+    background-color: blue;
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    align-self: flex-start;
+
+}
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.nav a {
+    height: 100%;
+    width: 100%;
+    padding: 5px 0;
+    display: block;
+}
+.nav a.active{
+    color: gold;
+}
+.nav a:hover {
+    color: #999;
+}

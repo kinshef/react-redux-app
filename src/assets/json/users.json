@@ -1,0 +1,116 @@
+{
+  "items": [
+    {
+      "name": "ravas",
+      "id": 5037,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "yankina",
+      "id": 5036,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "Andrey13",
+      "id": 5035,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": "asdfdsafadsf",
+      "followed": false
+    },
+    {
+      "name": "dembit",
+      "id": 5034,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "sc_coder",
+      "id": 5033,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "linux",
+      "id": 5032,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "Mher Simonyan",
+      "id": 5031,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": "https://social-network.samuraijs.com/activecontent/images/users/5031/user-small.jpg?v=1",
+        "large": "https://social-network.samuraijs.com/activecontent/images/users/5031/user.jpg?v=1"
+      },
+      "status": "Всем удачного дня!",
+      "followed": false
+    },
+    {
+      "name": "edymimolam",
+      "id": 5030,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "mar1an4ik33",
+      "id": 5029,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    },
+    {
+      "name": "mar1an4ik3",
+      "id": 5028,
+      "uniqueUrlName": null,
+      "photos": {
+        "small": null,
+        "large": null
+      },
+      "status": null,
+      "followed": false
+    }
+  ],
+  "totalCount": 1039,
+  "error": null
+}

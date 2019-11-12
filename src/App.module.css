@@ -1,0 +1,11 @@
+
+.App .flexBoxMain{
+    display: flex;
+}
+
+.flexBoxMain>section{
+    background-color: green;
+    flex: 3;
+    padding: 10px;
+}
+

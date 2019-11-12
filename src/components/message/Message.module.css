@@ -1,0 +1,61 @@
+
+.Message > p {
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.form>input {
+    margin: 5px;
+    border: none;
+    padding: 10px 15px;
+    height: 35px;
+    width: calc(100% - 170px);
+}
+
+.form button {
+    width: 150px;
+    background-color: #ccc;
+    margin: 5px;
+    border: none;
+    height: 35px;
+}
+.form>span {
+    margin: 0px 5px;
+}
+
+.container {
+    display: flex;
+}
+
+.dialogsItems {
+    flex: 1;
+    background-color: blue;
+    text-align: center;
+    padding: 10px;
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.dialogsItems ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.dialogsItems a {
+    height: 100%;
+    width: 100%;
+    padding: 10px 0;
+    display: block;
+}
+.dialogsItems a:hover {
+    color: #999;
+}
+.messages {
+    flex: 4;
+}
+.messages p{
+    margin: 5px;
+}

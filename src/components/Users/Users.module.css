@@ -1,0 +1,30 @@
+
+.Users > p {
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+
+.pages{
+    text-align: center;
+}
+.pages div{
+    display: inline-block;
+    margin: 0 5px;
+}
+.pages span {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-block;
+}
+.pages span:hover{
+    color: red;
+}
+.pages span.selectedPage{
+    font-weight: 600;
+    color: gold;
+}

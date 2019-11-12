@@ -1,0 +1,25 @@
+.post {
+    margin: 15px 0;
+    background-color: red;
+    display: flex;
+    position: relative;
+}
+.post img{
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+    border-radius: 50%;
+}
+.post>p,.post>span{
+    display: inline-block;
+}
+.post>p{
+    flex: 1;
+    padding: 5px;
+    height: 60px;
+}
+.post>span{
+    position: absolute;
+    bottom: 0;
+    left: 85px;
+}
