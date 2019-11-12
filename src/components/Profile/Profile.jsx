@@ -12,10 +12,17 @@ let Profile = (props) => {
         return <Preloader />
     }
 
+    const mainPhotoSelected = (even) => {
+        if (even.target.files.length) {
+            props.savePhoto(even.target.files[0])
+        }
+    }
+
     return (
         <div className={s.Profile}>
             <h5>Profile</h5>
             <img src={props.profile.photos.large != null ? props.profile.photos.large : fotoUser}/>
+            {props.isOwner && <input type="file" onChange={mainPhotoSelected}/>}
             <ProfileStatusHuck updateUsersStatus={props.updateUsersStatus} status={props.status} />
             {Object.keys(props.profile.contacts).map((p)=>
                 props.profile.contacts[p] &&
