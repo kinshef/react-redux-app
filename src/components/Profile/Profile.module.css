@@ -18,9 +18,11 @@
 }
 .soshialwrap {
     margin: 10px auto;
-    width: max-content;
+    width: 100%;
+    text-align: center;
 }
 .soshialwrap p {
     margin: 5px;
     display: inline-block;
 }
+

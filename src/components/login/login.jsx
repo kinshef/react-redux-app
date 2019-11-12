@@ -10,7 +10,7 @@ import {Redirect} from "react-router-dom";
 
 let LoginForm = (props) => {
     return(
-        <form onSubmit={props.handleSubmit} className={props.error && s.formError}>
+        <form onSubmit={props.handleSubmit} className={props.error && 'formError'}>
             {props.error && <span>{props.error}</span>}
             {createField(Input, "Login", [required], "Login")}
             {createField(Input, "Password", [required], "Password", {type: "password"})}

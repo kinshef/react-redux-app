@@ -1,0 +1,9 @@
+.formError>span, .error {
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+}
+.formError input, .inputError {
+    border: 2px solid red;
+}
