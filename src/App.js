@@ -4,7 +4,6 @@ import './default.css';
 import HeaderContainer from "./components/header/HeaderContainer";
 import Nav from "./components/nev/nav";
 import {Route, withRouter} from "react-router-dom";
-import MessageContainer from "./components/message/MessageContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import Login from "./components/login/login";
@@ -13,13 +12,12 @@ import {compose} from "redux";
 import {initialaizeApp} from "./redux/app-reduser";
 import Preloader from "./components/common/Preloader";
 
+const MessageContainer = React.lazy(() => import ("./components/message/MessageContainer"));
 
 class App extends React.Component {
     componentDidMount() {
         this.props.initialaizeApp()
     }
-
-
 
     render() {
         if(!this.props.initialaized){return <Preloader/>}
@@ -30,7 +28,11 @@ class App extends React.Component {
                     <Nav/>
                     <section>
                         <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
-                        <Route path='/message' render={() => <MessageContainer/>}/>
+                        <Route path='/message' render={() => {
+                            return <React.Suspense fallback={<div>Loading...</div>}>
+                                <MessageContainer/>
+                            </React.Suspense>
+                        }}/>
                         <Route path='/users' render={() => <UsersContainer/>}/>
                         <Route path='/login' render={() => <Login/>}/>
                     </section>
