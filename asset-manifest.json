@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/react-redux-app/static/css/main.48fa6e9e.chunk.css",
-    "main.js": "/react-redux-app/static/js/main.6af56042.chunk.js",
-    "main.js.map": "/react-redux-app/static/js/main.6af56042.chunk.js.map",
-    "runtime-main.js": "/react-redux-app/static/js/runtime-main.7a19192e.js",
-    "runtime-main.js.map": "/react-redux-app/static/js/runtime-main.7a19192e.js.map",
-    "static/js/2.bdc77586.chunk.js": "/react-redux-app/static/js/2.bdc77586.chunk.js",
-    "static/js/2.bdc77586.chunk.js.map": "/react-redux-app/static/js/2.bdc77586.chunk.js.map",
+    "main.css": "/react-redux-app/static/css/main.23a16d60.chunk.css",
+    "main.js": "/react-redux-app/static/js/main.860019a2.chunk.js",
+    "main.js.map": "/react-redux-app/static/js/main.860019a2.chunk.js.map",
+    "runtime-main.js": "/react-redux-app/static/js/runtime-main.5c666c1e.js",
+    "runtime-main.js.map": "/react-redux-app/static/js/runtime-main.5c666c1e.js.map",
+    "static/js/2.7dccf2ed.chunk.js": "/react-redux-app/static/js/2.7dccf2ed.chunk.js",
+    "static/js/2.7dccf2ed.chunk.js.map": "/react-redux-app/static/js/2.7dccf2ed.chunk.js.map",
+    "static/css/3.99f80d9c.chunk.css": "/react-redux-app/static/css/3.99f80d9c.chunk.css",
+    "static/js/3.1fc6b351.chunk.js": "/react-redux-app/static/js/3.1fc6b351.chunk.js",
+    "static/js/3.1fc6b351.chunk.js.map": "/react-redux-app/static/js/3.1fc6b351.chunk.js.map",
     "index.html": "/react-redux-app/index.html",
-    "precache-manifest.cff98c8c7dd5a48ebe8797827afc4625.js": "/react-redux-app/precache-manifest.cff98c8c7dd5a48ebe8797827afc4625.js",
+    "precache-manifest.21e45db5a13cb539e1a137e116d11851.js": "/react-redux-app/precache-manifest.21e45db5a13cb539e1a137e116d11851.js",
     "service-worker.js": "/react-redux-app/service-worker.js",
-    "static/css/main.48fa6e9e.chunk.css.map": "/react-redux-app/static/css/main.48fa6e9e.chunk.css.map",
+    "static/css/3.99f80d9c.chunk.css.map": "/react-redux-app/static/css/3.99f80d9c.chunk.css.map",
+    "static/css/main.23a16d60.chunk.css.map": "/react-redux-app/static/css/main.23a16d60.chunk.css.map",
     "static/media/20190911155229-1638.jpg": "/react-redux-app/static/media/20190911155229-1638.7e42175d.jpg",
     "static/media/giphy.gif": "/react-redux-app/static/media/giphy.2407b512.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.7a19192e.js",
-    "static/js/2.bdc77586.chunk.js",
-    "static/css/main.48fa6e9e.chunk.css",
-    "static/js/main.6af56042.chunk.js"
+    "static/js/runtime-main.5c666c1e.js",
+    "static/js/2.7dccf2ed.chunk.js",
+    "static/css/main.23a16d60.chunk.css",
+    "static/js/main.860019a2.chunk.js"
   ]
 }
