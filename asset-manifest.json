@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-redux-app/static/css/main.300b1a79.chunk.css",
-    "main.js": "/react-redux-app/static/js/main.ddebdd03.chunk.js",
-    "main.js.map": "/react-redux-app/static/js/main.ddebdd03.chunk.js.map",
-    "runtime-main.js": "/react-redux-app/static/js/runtime-main.ddf12d8d.js",
-    "runtime-main.js.map": "/react-redux-app/static/js/runtime-main.ddf12d8d.js.map",
-    "static/js/2.df809d1c.chunk.js": "/react-redux-app/static/js/2.df809d1c.chunk.js",
-    "static/js/2.df809d1c.chunk.js.map": "/react-redux-app/static/js/2.df809d1c.chunk.js.map",
+    "main.js": "/react-redux-app/static/js/main.a5ff6139.chunk.js",
+    "main.js.map": "/react-redux-app/static/js/main.a5ff6139.chunk.js.map",
+    "runtime-main.js": "/react-redux-app/static/js/runtime-main.e20ed02a.js",
+    "runtime-main.js.map": "/react-redux-app/static/js/runtime-main.e20ed02a.js.map",
+    "static/js/2.cbdc196f.chunk.js": "/react-redux-app/static/js/2.cbdc196f.chunk.js",
+    "static/js/2.cbdc196f.chunk.js.map": "/react-redux-app/static/js/2.cbdc196f.chunk.js.map",
     "static/css/3.99f80d9c.chunk.css": "/react-redux-app/static/css/3.99f80d9c.chunk.css",
-    "static/js/3.cdff2f08.chunk.js": "/react-redux-app/static/js/3.cdff2f08.chunk.js",
-    "static/js/3.cdff2f08.chunk.js.map": "/react-redux-app/static/js/3.cdff2f08.chunk.js.map",
+    "static/js/3.c4e036ae.chunk.js": "/react-redux-app/static/js/3.c4e036ae.chunk.js",
+    "static/js/3.c4e036ae.chunk.js.map": "/react-redux-app/static/js/3.c4e036ae.chunk.js.map",
     "index.html": "/react-redux-app/index.html",
-    "precache-manifest.751aa791e9749bea31655a71297c2dec.js": "/react-redux-app/precache-manifest.751aa791e9749bea31655a71297c2dec.js",
+    "precache-manifest.e1f060c9a811a8515d9fa2de260bfd19.js": "/react-redux-app/precache-manifest.e1f060c9a811a8515d9fa2de260bfd19.js",
     "service-worker.js": "/react-redux-app/service-worker.js",
     "static/css/3.99f80d9c.chunk.css.map": "/react-redux-app/static/css/3.99f80d9c.chunk.css.map",
     "static/css/main.300b1a79.chunk.css.map": "/react-redux-app/static/css/main.300b1a79.chunk.css.map",
@@ -19,9 +19,9 @@
     "static/media/giphy.gif": "/react-redux-app/static/media/giphy.2407b512.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.ddf12d8d.js",
-    "static/js/2.df809d1c.chunk.js",
+    "static/js/runtime-main.e20ed02a.js",
+    "static/js/2.cbdc196f.chunk.js",
     "static/css/main.300b1a79.chunk.css",
-    "static/js/main.ddebdd03.chunk.js"
+    "static/js/main.a5ff6139.chunk.js"
   ]
 }
