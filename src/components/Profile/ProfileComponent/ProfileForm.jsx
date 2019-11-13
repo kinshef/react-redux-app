@@ -5,8 +5,7 @@ import {createField, Input} from "../../../utilit/FormControls/FormsControls";
 import {reduxForm} from "redux-form";
 
 
-let ProfileForm = ({profile, isOwner, endToEditMode, handleSubmit, error}) => {
-    let contacts = {};
+let ProfileForm = ({profile, profileUpdateStatus, endToEditMode, handleSubmit, error}) => {
     const normalizeBoolean = value => {
         if (value === "true") {
             return true;
@@ -20,9 +19,9 @@ let ProfileForm = ({profile, isOwner, endToEditMode, handleSubmit, error}) => {
     };
     return (
         <form onSubmit={handleSubmit} className={error && 'formError'}>
-            {/*{isOwner && <div><button onClick={endToEditMode}>save</button></div>}*/}
-            <div>
-                <button>save</button>
+            <div>{!profileUpdateStatus
+                ? <button onClick={endToEditMode}>save</button>
+                : <button onClick={endToEditMode}>end</button>}
             </div>
             {error && <span>{error}</span>}
             {Object.keys(profile.contacts).map((p) =>

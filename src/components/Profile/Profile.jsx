@@ -22,20 +22,21 @@ let Profile = (props) => {
     }
 
     const onSubmit = (formData) => {
-        props.saveProfile(formData).then(() => {
+        props.saveProfile(formData)
+        // .then(() => {setEditMode(false)})
+        if (props.profileUpdateStatus) {
             setEditMode(false)
-        })
-
+        }
     }
 
     return (
         <div className={s.Profile}>
             <h5>Profile</h5>
-            <img src={props.profile.photos.large != null ? props.profile.photos.large : fotoUser}/>
+            <img src={props.profile.photos.large !== null ? props.profile.photos.large : fotoUser}/>
             {props.isOwner && <input type="file" onChange={mainPhotoSelected}/>}
             <ProfileStatusHuck updateUsersStatus={props.updateUsersStatus} status={props.status} />
             { editMode
-                ? <ProfileForm onSubmit={onSubmit} isOwner={props.isOwner} initialValues={props.profile} profile={props.profile}/>
+                ? <ProfileForm profileUpdateStatus={props.profileUpdateStatus} onSubmit={onSubmit} initialValues={props.profile} profile={props.profile}/>
                 : <ProfileData isOwner={props.isOwner} goToEditMode={() => {setEditMode(true)}} profile={props.profile}/>}
             <MyPostsContainer />
         </div>
