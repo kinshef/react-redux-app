@@ -14,7 +14,7 @@ let initialState = {
     ],
     profile: null,
     status: '',
-    profileUpdateStatus: false
+    profileUpdateStatus: true
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -64,7 +64,6 @@ export const savePhoto = (photo) => async dispatch => {
     }
 }
 export const saveProfile = (profile) => async (dispatch, getState) => {
-    dispatch(setProfileUpdateStatus(false))
     let data = await profileAPI.saveProfile(profile)
     const myId = getState().auth.id
     if (data.resultCode === 0) {

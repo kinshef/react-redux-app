@@ -7,6 +7,7 @@ import fotoUser from "../../assets/img/20190911155229-1638.jpg";
 import ProfileStatusHuck from "./ProfileComponent/ProfileStatusHuck";
 import ProfileData from "./ProfileComponent/ProfileData";
 import ProfileForm from "./ProfileComponent/ProfileForm";
+import {setProfileUpdateStatus} from "../../redux/profile-reduser";
 
 let Profile = (props) => {
     const [editMode, setEditMode] = useState(false);
@@ -28,7 +29,10 @@ let Profile = (props) => {
             setEditMode(false)
         }
     }
-
+    const updateStatus = () => {
+        setEditMode(true)
+        props.setProfileUpdateStatus(false)
+    }
     return (
         <div className={s.Profile}>
             <h5>Profile</h5>
@@ -37,7 +41,7 @@ let Profile = (props) => {
             <ProfileStatusHuck updateUsersStatus={props.updateUsersStatus} status={props.status} />
             { editMode
                 ? <ProfileForm profileUpdateStatus={props.profileUpdateStatus} onSubmit={onSubmit} initialValues={props.profile} profile={props.profile}/>
-                : <ProfileData isOwner={props.isOwner} goToEditMode={() => {setEditMode(true)}} profile={props.profile}/>}
+                : <ProfileData isOwner={props.isOwner} goToEditMode={updateStatus} profile={props.profile}/>}
             <MyPostsContainer />
         </div>
     );

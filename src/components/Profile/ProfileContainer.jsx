@@ -41,6 +41,7 @@ class ProfileContainer extends React.Component {
                          status={this.props.status}
                          saveProfile={this.props.saveProfile}
                          profileUpdateStatus={this.props.profileUpdateStatus}
+                         setProfileUpdateStatus={this.props.setProfileUpdateStatus}
                          profile={this.props.profile}/>)
     }
 }
@@ -51,12 +52,12 @@ let mapStateToProps = (state) => {
         status: state.profilePage.status,
         authorizedUserId: state.auth.id,
         isAuth: state.auth.isAuth,
-        profileUpdateStatus: state.profilePage.profileUpdateStatus
+        profileUpdateStatus: state.profilePage.profileUpdateStatus,
     }
 };
 
 
 export default compose(withRouter,
-    connect(mapStateToProps, {getProfileUsers, getUsersStatus, updateUsersStatus, saveProfile, savePhoto})
+    connect(mapStateToProps, {getProfileUsers, getUsersStatus, updateUsersStatus, saveProfile, savePhoto, setProfileUpdateStatus})
 )(ProfileContainer);
 
