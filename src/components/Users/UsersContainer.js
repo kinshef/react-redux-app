@@ -2,8 +2,11 @@ import React from 'react';
 import Users from "./Users";
 import {connect} from "react-redux";
 import {setCurrentPage, getUsers, getUnFollowUsers, getFollowUsers} from "../../redux/users-reduser";
+import {getCurrentPage, getFollowingInProgress, getIsFetching, getPageSize, getTotalUsersCount, getUserData
+} from "../../redux/users-selectors";
 import Preloader from "../common/Preloader";
 import {compose} from "redux";
+
 
 
 class UsersContainer extends React.Component {
@@ -20,7 +23,6 @@ class UsersContainer extends React.Component {
             <>
                 {this.props.isFetching ? <Preloader /> : null}
                 <Users userData={this.props.userData}
-                       displayedPage={this.props.displayedPage}
                        totalUsersCount={this.props.totalUsersCount}
                        currentPage={this.props.currentPage}
                        followingInProgress={this.props.followingInProgress}
@@ -37,13 +39,12 @@ class UsersContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return{
-        userData: state.usersPage.userData,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: state.usersPage.totalUsersCount,
-        displayedPage: state.usersPage.displayedPage,
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        followingInProgress: state.usersPage.followingInProgress
+        userData: getUserData(state),
+        followingInProgress: getFollowingInProgress(state),
+        currentPage: getCurrentPage(state),
+        pageSize: getPageSize(state),
+        isFetching: getIsFetching(state),
+        totalUsersCount: getTotalUsersCount(state)
     }
 };
 

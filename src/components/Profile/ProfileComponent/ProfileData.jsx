@@ -6,7 +6,7 @@ let ProfileData = ({profile, isOwner, goToEditMode}) => {
         <div>
             {isOwner && <div><button onClick={goToEditMode}>edit</button></div>}
             {Object.keys(profile.contacts).map((p)=>
-                <div className={s.soshialwrap}>
+                <div key={p} className={s.soshialwrap}>
                     <p>{p} - </p>
                     <a href={profile.contacts[p]}>{profile.contacts[p] ? profile.contacts[p] : 'не указано'}</a>
                 </div>

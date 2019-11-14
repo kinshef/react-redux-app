@@ -5,7 +5,9 @@ const ProfileStatusHuck = (props) => {
     let [status, getStatus] = useState(props.status);
 
     const activateEditMode = () => {
-        setEditMode(true)
+        if(props.isOwner){
+            setEditMode(true)
+        }
     }
 
     const deactivateEditMode = () => {
@@ -21,15 +23,6 @@ const ProfileStatusHuck = (props) => {
         getStatus(props.status)
     }, [props.status])
 
-    // componentDidUpdate(prevProps, prevState) {
-    //     if(prevProps.status !== this.props.status){
-    //         this.setState({
-    //             status: this.props.status
-    //         })
-    //     }
-    // }
-
-
     return (
         <div>
             <span>Статус - </span>
@@ -40,6 +33,5 @@ const ProfileStatusHuck = (props) => {
         </div>
     )
 }
-
 
 export default ProfileStatusHuck;

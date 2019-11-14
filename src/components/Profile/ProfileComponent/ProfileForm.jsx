@@ -5,27 +5,21 @@ import {createField, Input} from "../../../utilit/FormControls/FormsControls";
 import {reduxForm} from "redux-form";
 
 
-let ProfileForm = ({profile, profileUpdateStatus, endToEditMode, handleSubmit, error}) => {
+let ProfileForm = ({profile, profileUpdateStatus, handleSubmit, error}) => {
     const normalizeBoolean = value => {
-        if (value === "true") {
-            return true;
-        }
-
-        if (value === "false") {
-            return false;
-        }
-
+        if (value === "true") {return true;}
+        if (value === "false") {return false;}
         return value;
     };
     return (
         <form onSubmit={handleSubmit} className={error && 'formError'}>
             <div>{!profileUpdateStatus
-                ? <button onClick={endToEditMode}>save</button>
-                : <button onClick={endToEditMode}>end</button>}
+                ? <button>save</button>
+                : <button>end</button>}
             </div>
             {error && <span>{error}</span>}
             {Object.keys(profile.contacts).map((p) =>
-                <div className={s.soshialwrap}>
+                <div key={p} className={s.soshialwrap}>
                     <p>{p}</p>
                     {createField(Input, `contacts.${p}`, [], p)}{}
                 </div>
