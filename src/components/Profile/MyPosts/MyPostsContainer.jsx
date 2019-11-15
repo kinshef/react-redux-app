@@ -2,6 +2,7 @@ import React from 'react';
 import {addPost} from "../../../redux/profile-reduser";
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
+import {getPostData} from "../../../redux/selectors/profile-selectors";
 
 class MyPostsContainer extends React.Component {
     render() {
@@ -11,8 +12,7 @@ class MyPostsContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return{
-        postData: state.profilePage.postData,
-        newPostText: state.profilePage.newPostText
+        postData: getPostData(state)
     }
 };
 

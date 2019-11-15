@@ -1,0 +1,21 @@
+
+.paginations{
+    text-align: center;
+}
+.paginations div{
+    display: inline-block;
+    margin: 0 5px;
+}
+.paginations span {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-block;
+}
+.paginations span:hover{
+    color: red;
+}
+.paginations span.selectedPage{
+    font-weight: 600;
+    color: gold;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import s from './Messages.module.css';
+// import style from './Messages.module.css';
 
 
-let Messages = (props) => {
+let Messages = ({messages}) => {
     return (
-        <p>{props.messages}</p>
+        <p>{messages}</p>
     );
 }
 

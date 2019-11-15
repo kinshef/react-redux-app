@@ -1,13 +1,13 @@
 import React from 'react';
-import s from './Post.module.css';
+import style from './Post.module.css';
 import fotoUser from '../../../../assets/img/logo192.png'
 
-let MyPosts = (props) => {
+let MyPosts = ({massage, laick}) => {
     return (
-        <div className={s.post}>
-            <img src={fotoUser}/>
-            <p>{props.massage}</p>
-            <span>laick {props.laick}</span>
+        <div className={style.post}>
+            <img alt='' src={fotoUser}/>
+            <p>{massage}</p>
+            <span>laick {laick}</span>
         </div>
     );
 }

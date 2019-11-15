@@ -1,9 +1,8 @@
 import React from 'react';
-import s from './App.module.css';
-import './default.css';
+import style from './App.module.css';
 import HeaderContainer from "./components/header/HeaderContainer";
 import Nav from "./components/nev/nav";
-import {Route, withRouter} from "react-router-dom";
+import {Redirect, Route, withRouter} from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
 import Login from "./components/login/login";
@@ -11,6 +10,7 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import {initialaizeApp} from "./redux/app-reduser";
 import Preloader from "./components/common/Preloader";
+import {getInitialaized} from "./redux/selectors/app-selectors";
 
 const MessageContainer = React.lazy(() => import ("./components/message/MessageContainer"));
 
@@ -22,11 +22,12 @@ class App extends React.Component {
     render() {
         if(!this.props.initialaized){return <Preloader/>}
         return (
-            <div className={s.App}>
+            <div className={style.App}>
                 <HeaderContainer/>
-                <div className={`${s.flexBoxMain} wrap`}>
+                <div className={`${style.flexBoxMain} wrap`}>
                     <Nav/>
                     <section>
+                        <Route exact path='/' render={() => <Redirect to="/profile" />}/>
                         <Route path='/profile/:userId?' render={() => <ProfileContainer/>}/>
                         <Route path='/message' render={() => {
                             return <React.Suspense fallback={<div>Loading...</div>}>
@@ -43,9 +44,7 @@ class App extends React.Component {
 }
 
 let mapStateToProps = (state) => {
-    return{
-        initialaized: state.appPage.initialaized
-    }
+    return{initialaized: getInitialaized(state)}
 };
 
 export default compose(withRouter, connect(mapStateToProps, {initialaizeApp}))(App)

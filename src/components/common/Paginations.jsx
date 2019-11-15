@@ -1,7 +1,7 @@
 import React from 'react';
-import s from '../Users/Users.module.css';
+import style from './Paginations.module.css';
 
-let Psginators = ({totalUsersCount, pageSize, currentPage, onPageChanged, pageSee}) => {
+let Paginators = ({totalUsersCount, pageSize, currentPage, onPageChanged, pageSee}) => {
 
     let pagesCount = Math.ceil(totalUsersCount / pageSize);
     let pages = [];
@@ -12,15 +12,15 @@ let Psginators = ({totalUsersCount, pageSize, currentPage, onPageChanged, pageSe
     }
     let filterPages = pages.filter(p => p < rightCurrentPage+1 && p > leftCurrentPage-1)
 
-    let DivPage = ({page}) => <span onClick={() => {onPageChanged(page)}} className={currentPage === page && s.selectedPage}>{page}</span>
-
     return (
-        <div className={s.pages}>
-            {currentPage > pageSee+1 && <><DivPage page={1}/><div>...</div></>}
-            {filterPages.map(p => <DivPage page={p}/>)}
-            {currentPage < pagesCount-pageSee && <><div>...</div><DivPage page={pagesCount}/></>}
+        <div className={style.paginations}>
+            {currentPage > pageSee+1 && <><span onClick={() => {onPageChanged(1)}}>{1}</span><div>...</div></>}
+            {filterPages.map(p =>
+                <span key={p} onClick={() => {onPageChanged(p)}} className={currentPage === p ? style.selectedPage : ''}>{p}</span>
+            )}
+            {currentPage < pagesCount-pageSee && <><div>...</div><span onClick={() => {onPageChanged(pagesCount)}}>{pagesCount}</span></>}
         </div>
     );
 }
 
-export default Psginators;
+export default Paginators;

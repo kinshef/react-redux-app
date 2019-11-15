@@ -42,38 +42,37 @@ export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos})
 export const setProfileUpdateStatus = (profileUpdateStatus) => ({type: TOGGLE_PROFILE_UPDATE_STATUS, profileUpdateStatus});
 
 export const getProfileUsers = (userID) => async dispatch => {
-    let data = await profileAPI.getUser(userID)
-    dispatch(setUserProfile(data));
+    let response = await profileAPI.getUser(userID);
+    dispatch(setUserProfile(response));
 }
 
 export const getUsersStatus = (userID) => async dispatch => {
-    let status = await profileAPI.getStatus(userID)
-    dispatch(setStatus(status));
+    let response = await profileAPI.getStatus(userID);
+    dispatch(setStatus(response));
 }
 
 export const updateUsersStatus = (status) => async dispatch => {
-    let data = await profileAPI.updateStatus(status)
-    if (data.resultCode === 0) {
+    let response = await profileAPI.updateStatus(status);
+    if (response.resultCode === 0) {
         dispatch(setStatus(status));
     }
 }
 export const savePhoto = (photo) => async dispatch => {
-    let data = await profileAPI.savePhoto(photo)
-    if (data.resultCode === 0) {
-        dispatch(savePhotoSuccess(data.data.photos));
+    let response = await profileAPI.savePhoto(photo);
+    if (response.resultCode === 0) {
+        dispatch(savePhotoSuccess(response.data.photos));
     }
 }
 export const saveProfile = (profile) => async (dispatch, getState) => {
-    let data = await profileAPI.saveProfile(profile)
-    const myId = getState().auth.id
-    if (data.resultCode === 0) {
+    let response = await profileAPI.saveProfile(profile);
+    const myId = getState().auth.id;
+    if (response.resultCode === 0) {
         dispatch(getProfileUsers(myId));
         dispatch(setProfileUpdateStatus(true))
     }else {
-        dispatch(stopSubmit("edit-profile", {_error: data.messages[0]}));
-        // dispatch(stopSubmit("edit-profile", {"contacts": { "facebook": data.messages[0]} }));
-
-        // return Promise.reject(data.messages[0])
+        dispatch(stopSubmit("edit-profile", {_error: response.messages[0]}));
+        // dispatch(stopSubmit("edit-profile", {"contacts": { "facebook": response.messages[0]} }));
+        // return Promise.reject(response.messages[0])
     }
 }
 

@@ -1,23 +1,23 @@
 import React from 'react';
-import s from './header.module.css';
+import style from './header.module.css';
 import fotoUser from '../../assets/img/logo192.png'
 import {NavLink} from "react-router-dom";
 import Preloader from "../common/Preloader";
 
-let Header = (props) => {
+let Header = ({isFetching, isAuth, login, AuthLogout}) => {
     return (
         <header>
             <div className="wrap">
-                <div className={s.content}>
-                    <a href='/' className={s.logo}>
-                        <img src={fotoUser}/>
+                <div className={style.content}>
+                    <a href='/' className={style.logo}>
+                        <img  alt='' src={fotoUser}/>
                     </a>
-                    <div className={s.taitel}>test: react/redux</div>
-                    {props.auth.isFetching
-                        ? <Preloader class={s.preloader}/>
-                        : props.auth.isAuth
-                            ? <div><button onClick={props.AuthLogout}>LogOut</button> <p className={s.login}>{props.auth.login}</p></div>
-                            : <NavLink className={s.NavLogin} to='/login'>Login</NavLink>}
+                    <div className={style.taitel}>test: react/redux</div>
+                    {isFetching
+                        ? <Preloader class={style.preloader}/>
+                        : isAuth
+                            ? <div><button onClick={AuthLogout}>LogOut</button> <p className={style.login}>{login}</p></div>
+                            : <NavLink className={style.NavLogin} to='/login'>Login</NavLink>}
                 </div>
             </div>
         </header>

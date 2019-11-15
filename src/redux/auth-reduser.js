@@ -43,34 +43,34 @@ export const getCaptchaUrlSuccess = (url) => ({type: GET_CAPTCHA_URL_SUCCESS, ur
 
 export const AuthMe = () => async dispatch => {
     dispatch(toggleIsFetching(true));
-    let data = await authAPI.getAuthMe()
-    if (data.resultCode === 0) {
-        let authUser = data.data;
+    let response = await authAPI.getAuthMe()
+    if (response.resultCode === 0) {
+        let authUser = response.data;
         dispatch(setUserData(authUser.id, authUser.email, authUser.login, true));
     }
     dispatch(toggleIsFetching(false));
 }
 export const AuthLogin = (email, password, rememberMe, captcha) => async dispatch => {
-    let data = await authAPI.login(email, password, rememberMe, captcha)
-    if (data.resultCode === 0) {
+    let response = await authAPI.login(email, password, rememberMe, captcha)
+    if (response.resultCode === 0) {
         dispatch(AuthMe())
     } else {
-        let messages = data.messages.length > 0 ? data.messages[0] : "Common error"
+        let messages = response.messages.length > 0 ? response.messages[0] : "Common error"
         dispatch(stopSubmit("login", {_error: messages}));
-        if(data.resultCode === 10) {
+        if(response.resultCode === 10) {
             dispatch(getCaptchaUrl())
         }
     }
 }
 export const AuthLogout = () => async dispatch => {
-    let data = await authAPI.logout()
-    if (data.resultCode === 0) {
+    let response = await authAPI.logout()
+    if (response.resultCode === 0) {
         dispatch(setUserData(null, null, null, false));
     }
 }
 export const getCaptchaUrl = () => async dispatch => {
-    let data = await securityAPI.getCaptchaUrl()
-    let CaptchaUrl = data.url;
+    let response = await securityAPI.getCaptchaUrl()
+    let CaptchaUrl = response.url;
     dispatch(getCaptchaUrlSuccess(CaptchaUrl))
 }
 

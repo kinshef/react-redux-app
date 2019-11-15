@@ -1,11 +1,10 @@
 import React from 'react';
-import s from '../Profile.module.css';
-// import {reduxForm} from "redux-form";
+import style from '../Profile.module.css';
 import {createField, Input} from "../../../utilit/FormControls/FormsControls";
 import {reduxForm} from "redux-form";
 
 
-let ProfileForm = ({profile, profileUpdateStatus, handleSubmit, error}) => {
+let ProfileForm = ({profile: {contacts}, profileUpdateStatus, handleSubmit, error}) => {
     const normalizeBoolean = value => {
         if (value === "true") {return true;}
         if (value === "false") {return false;}
@@ -18,10 +17,10 @@ let ProfileForm = ({profile, profileUpdateStatus, handleSubmit, error}) => {
                 : <button>end</button>}
             </div>
             {error && <span>{error}</span>}
-            {Object.keys(profile.contacts).map((p) =>
-                <div key={p} className={s.soshialwrap}>
+            {Object.keys(contacts).map((p) =>
+                <div key={p} className={style.soshialwrap}>
                     <p>{p}</p>
-                    {createField(Input, `contacts.${p}`, [], p)}{}
+                    {createField(Input, `contacts.${p}`, [], p)}
                 </div>
             )}
             <div>

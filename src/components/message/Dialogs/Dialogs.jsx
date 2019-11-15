@@ -1,11 +1,11 @@
 import React from 'react';
-import s from './Dialogs.module.css';
+// import style from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
 
 
-let DialogItems = (props) => {
+let DialogItems = ({id, user}) => {
     return (
-        <li><NavLink to={`/message/${props.id}`}>{props.user}</NavLink></li>
+        <li><NavLink to={`/message/${id}`}>{user}</NavLink></li>
     )
 }
 

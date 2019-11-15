@@ -1,15 +1,15 @@
 import React from 'react';
-import s from './Users.module.css';
+import style from './Users.module.css';
 import User from "./user/User";
-import Psginators from "../common/Paginations";
+import Paginations from "../common/Paginations";
 
-let Users = ({userData, pageSize, totalUsersCount, currentPage, followingInProgress, onPageChanged, getUnFollowUsers, getFollowUsers}) => {
+let Users = ({userData, pageSize, totalUsersCount, currentPage, followingInProgress, getUnFollowUsers, getFollowUsers, onPageChanged}) => {
     return (
-        <div className={s.Users}>
-            <div className={s.Users}>
+        <div className={style.Users}>
+            <div className={style.Users}>
                 <p>Users</p>
-                <Psginators currentPage={currentPage}
-                            pageSee={4}
+                <Paginations currentPage={currentPage}
+                            pageSee={4} //сколько страниц видно справа и слева
                             pageSize={pageSize}
                             onPageChanged={onPageChanged}
                             totalUsersCount={totalUsersCount}/>
