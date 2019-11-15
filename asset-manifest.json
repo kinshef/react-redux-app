@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/react-redux-app/static/css/main.300b1a79.chunk.css",
-    "main.js": "/react-redux-app/static/js/main.06c7e164.chunk.js",
-    "main.js.map": "/react-redux-app/static/js/main.06c7e164.chunk.js.map",
-    "runtime-main.js": "/react-redux-app/static/js/runtime-main.e20ed02a.js",
-    "runtime-main.js.map": "/react-redux-app/static/js/runtime-main.e20ed02a.js.map",
-    "static/js/2.cbdc196f.chunk.js": "/react-redux-app/static/js/2.cbdc196f.chunk.js",
-    "static/js/2.cbdc196f.chunk.js.map": "/react-redux-app/static/js/2.cbdc196f.chunk.js.map",
-    "static/css/3.99f80d9c.chunk.css": "/react-redux-app/static/css/3.99f80d9c.chunk.css",
-    "static/js/3.c4e036ae.chunk.js": "/react-redux-app/static/js/3.c4e036ae.chunk.js",
-    "static/js/3.c4e036ae.chunk.js.map": "/react-redux-app/static/js/3.c4e036ae.chunk.js.map",
+    "main.css": "/react-redux-app/static/css/main.5b8fbb9b.chunk.css",
+    "main.js": "/react-redux-app/static/js/main.2cb11eba.chunk.js",
+    "main.js.map": "/react-redux-app/static/js/main.2cb11eba.chunk.js.map",
+    "runtime-main.js": "/react-redux-app/static/js/runtime-main.48cb913d.js",
+    "runtime-main.js.map": "/react-redux-app/static/js/runtime-main.48cb913d.js.map",
+    "static/js/2.c522af0b.chunk.js": "/react-redux-app/static/js/2.c522af0b.chunk.js",
+    "static/js/2.c522af0b.chunk.js.map": "/react-redux-app/static/js/2.c522af0b.chunk.js.map",
+    "static/css/3.dd0dc036.chunk.css": "/react-redux-app/static/css/3.dd0dc036.chunk.css",
+    "static/js/3.0d68739e.chunk.js": "/react-redux-app/static/js/3.0d68739e.chunk.js",
+    "static/js/3.0d68739e.chunk.js.map": "/react-redux-app/static/js/3.0d68739e.chunk.js.map",
     "index.html": "/react-redux-app/index.html",
-    "precache-manifest.e1ee9c6c414225046880aaa9d757f272.js": "/react-redux-app/precache-manifest.e1ee9c6c414225046880aaa9d757f272.js",
+    "precache-manifest.75e0a4edc112ee6e3b306af67f5beb72.js": "/react-redux-app/precache-manifest.75e0a4edc112ee6e3b306af67f5beb72.js",
     "service-worker.js": "/react-redux-app/service-worker.js",
-    "static/css/3.99f80d9c.chunk.css.map": "/react-redux-app/static/css/3.99f80d9c.chunk.css.map",
-    "static/css/main.300b1a79.chunk.css.map": "/react-redux-app/static/css/main.300b1a79.chunk.css.map",
+    "static/css/3.dd0dc036.chunk.css.map": "/react-redux-app/static/css/3.dd0dc036.chunk.css.map",
+    "static/css/main.5b8fbb9b.chunk.css.map": "/react-redux-app/static/css/main.5b8fbb9b.chunk.css.map",
     "static/media/20190911155229-1638.jpg": "/react-redux-app/static/media/20190911155229-1638.7e42175d.jpg",
     "static/media/giphy.gif": "/react-redux-app/static/media/giphy.2407b512.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.e20ed02a.js",
-    "static/js/2.cbdc196f.chunk.js",
-    "static/css/main.300b1a79.chunk.css",
-    "static/js/main.06c7e164.chunk.js"
+    "static/js/runtime-main.48cb913d.js",
+    "static/js/2.c522af0b.chunk.js",
+    "static/css/main.5b8fbb9b.chunk.css",
+    "static/js/main.2cb11eba.chunk.js"
   ]
 }
